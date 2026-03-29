@@ -1,0 +1,35 @@
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@import '@fontsource/inter/700.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-background text-text-primary font-sans antialiased;
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply bg-background border border-border focus:border-primary focus:ring-1 focus:ring-primary rounded-2xl px-4 py-2.5 text-text-primary transition-all shadow-sm outline-none text-sm font-medium;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-border rounded-full hover:bg-zinc-700 transition-colors;
+}
